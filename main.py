@@ -11,34 +11,38 @@ print("Welcome to game - SNAKE WATER GUN.")
 print(rules)
 choice = ["s", "w", "g"]
 comp = random.choice(choice)
-def Game():
-# Case 1
+
+
+def game():
+    # Case 1
     user = input("Enter your choice - S for Snake, W for water, G for gun: ").lower()
     if user == comp:
-        return(f"You choosed {user} and the computer choosed {comp}. Its an draw !")
+        return f"You chose {user} and the computer chose {comp}. Its an draw !"
     # Case 2
     elif user == "s" and comp == "g":
-        return(f"You choosed {user} and the computer choosed {comp}. The computer wins !")
+        return f"You chose {user} and the computer chose {comp}. The computer wins !"
     elif user == "g" and comp == "s":
-        return(f"You choosed {user} and the computer choosed {comp}. You win !")
+        return f"You chose {user} and the computer chose {comp}. You win !"
     # Case 3
     elif user == "g" and comp == "w":
-        return(f"You choosed {user} and the computer choosed {comp}. The computer wins !")
+        return f"You chose {user} and the computer chose {comp}. The computer wins !"
     elif user == "w" and comp == "g":
-        return(f"You choosed {user} and the computer choosed {comp}. You win !")
+        return f"You chose {user} and the computer chose {comp}. You win !"
     # Case 4
     elif user == "w" and comp == "s":
-        return(f"You choosed {user} and the computer choosed {comp}. The computer wins !")
+        return f"You chose {user} and the computer chose {comp}. The computer wins !"
     elif user == "s" and comp == "w":
-        return(f"You choosed {user} and the computer choosed {comp}. You win !")
+        return f"You chose {user} and the computer chose {comp}. You win !"
     else:
-        return("Invalid move")
-print(Game())
+        return "Invalid move"
+
+
+print(game())
 
 con = input("Do you want to continue the game ? (Yes/No):  ").lower()
 
 if con == "yes":
-    print(Game())
+    print(game())
 elif con == "no":
     print("The game has exited successfully.")
 else:
