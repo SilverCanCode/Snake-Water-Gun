@@ -10,10 +10,10 @@ print(display)
 print("Welcome to game - SNAKE WATER GUN.")
 print(rules)
 choice = ["s", "w", "g"]
-comp = random.choice(choice)
 
 
 def game():
+    comp = random.choice(choice)
     # Case 1
     user = input("Enter your choice - S for Snake, W for water, G for gun: ").lower()
     if user == comp:
@@ -39,11 +39,14 @@ def game():
 
 print(game())
 
-con = input("Do you want to continue the game ? (Yes/No):  ").lower()
+answer = True
 
-if con == "yes":
-    print(game())
-elif con == "no":
-    print("The game has exited successfully.")
-else:
-    print("Invalid input")
+while answer:
+    con = input("Do you want to continue the game ? (Yes/No):  ").lower()
+    if con == "yes":
+        print(game())
+    elif con == "no":
+        answer = False
+        print("Bye Bye")
+    else:
+        print("Invalid input")
